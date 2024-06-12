@@ -3,7 +3,7 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .layout{
-    display: inline-grid;
+    display: grid;
     width: 100vw;
     height: 100vh;
     grid-template: 1fr 5fr/1fr 5fr;
@@ -18,6 +18,10 @@ body{
 .header{
     grid-area: 1/2/2/3;
     background-color: #8EB1C7;
+    display: grid;
+    grid-template: repeat(2, 1fr)/.15fr 1fr repeat(3, .15fr);
+    justify-items: center;
+    align-items: center;
 }
 .main_content{
     grid-area: 2/2/3/3;
@@ -41,4 +45,74 @@ body{
 }
 .left_links > p{
     margin-left: 50px;
+}
+.search_button_container{
+    justify-self: end;
+    margin-right: 10px;
+}
+#search_button{
+    background-color: #8EB1C7;
+    border: 0px;
+}
+#search_button:hover{
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.profile_pic > img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+.profile_name{
+    font-size: 1.25em;
+    font-weight: 600;
+}
+.profile_pic_bigger > img{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    margin-bottom: 5px;
+}
+.header_buttons > button{
+    background-color: #EB4511;
+    border: 0px;
+    border-radius: 10px;
+    width: 7em;
+    height: 3em;
+    font-weight: 600;
+}
+.header_buttons > button:hover{
+    border: 2px solid black;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.welcome_message{
+    justify-self: start;
+}
+#welcome_message_1{
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0px;
+}
+#welcome_message_2{
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0px;
+}
+.search_bar_container{
+    justify-self: start;
+}
+#search_bar{
+    height: 20px;
+    width: 600px;
+    margin-top: -3px;
+    background-color: #C1BFB5;
+    border: 2px solid rgb(36, 36, 36);
+    border-radius: 10px;
+}
+#search_bar:focus{
+    background-color: #C1BFB5;
+    border: 3px solid rgb(36, 36, 36);
+    outline: none !important;
 }
