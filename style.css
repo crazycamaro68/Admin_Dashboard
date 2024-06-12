@@ -8,12 +8,12 @@ body{
     height: 100vh;
     grid-template: 1fr 5fr/1fr 5fr;
 }
-.layout > div{
-    /* border: 2px red solid; */
-}
 .sidebar{
     grid-area: 1 / 1 / 3 / 2;
     background-color: #EB4511;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .header{
     grid-area: 1/2/2/3;
@@ -37,6 +37,7 @@ body{
     font-size: 1em;
     font-weight: 600;
     margin: 15px;
+    margin-left: 50px;
 }
 .left_links > p{
     margin-left: 50px;
